@@ -5,7 +5,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/BioEMU-Protein-Dynamics)](https://github.com/your-username/BioEMU-Protein-Dynamics)
+[![GitHub Stars](https://img.shields.io/github/stars/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite)](https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite)
 
 **A complete, production-ready analysis suite for protein molecular dynamics simulations with support for both BioEMU and classical all-atom MD trajectories**
 
@@ -145,8 +145,8 @@ This toolkit has been developed and tested across diverse protein systems. The s
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/BioEMU-Protein-Dynamics.git
-cd BioEMU-Protein-Dynamics
+git clone https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite.git
+cd BioEMU-Protein-Dynamics-Analysis-Suite
 
 # Create and activate conda environment
 conda create -n bioemu-analysis python=3.9
@@ -160,8 +160,8 @@ pip install -r requirements.txt
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/BioEMU-Protein-Dynamics.git
-cd BioEMU-Protein-Dynamics
+git clone https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite.git
+cd BioEMU-Protein-Dynamics-Analysis-Suite
 
 # Create virtual environment
 python3 -m venv bioemu-env
@@ -532,8 +532,8 @@ A: See the [Citation](#citation) section above.
 ## Support
 
 - 📖 Check [documentation](docs/)
-- 🔍 Search [issues](https://github.com/your-username/BioEMU-Protein-Dynamics/issues)
-- 💬 Open a [discussion](https://github.com/your-username/BioEMU-Protein-Dynamics/discussions)
+- 🔍 Search [issues](https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite/issues)
+- 💬 Open a [discussion](https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite/discussions)
 
 ---
 
