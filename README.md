@@ -486,8 +486,21 @@ If you use this analysis suite in your research, please cite:
 
 ### Related Publications
 
-- Reference this toolkit when reporting analyses performed with this suite
-- Consider citing relevant MD software (GROMACS, MDAnalysis, etc.) used in conjunction
+If you use BioEMU simulations, please also cite the original BioEMU paper:
+
+```bibtex
+@article{lin2024scalable,
+  title={Scalable emulation of protein equilibrium ensembles},
+  author={Lin, Ze and Frey, Nathaniel C. and others},
+  journal={Nature Methods},
+  year={2024}
+}
+```
+
+Additionally, consider citing relevant software used in conjunction:
+- GROMACS (if using classical MD trajectories)
+- MDAnalysis (for trajectory analysis)
+- NumPy, SciPy, Matplotlib (for numerical computing and visualization)
 
 ---
 
