@@ -476,18 +476,18 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 If you use this analysis suite in your research, please cite:
 
 ```bibtex
-@software{bioemu_analysis_2025,
-  author = {Your Name},
+@software{bioemu_analysis_2026,
+  author = {Laddha, Aditi},
   title = {BioEMU Analysis Suite: Comprehensive Protein Dynamics Analysis},
-  year = {2025},
-  url = {https://github.com/your-username/BioEMU-Protein-Dynamics}
+  year = {2026},
+  url = {https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite}
 }
 ```
 
 ### Related Publications
 
-- Your PhD thesis or publications using this toolkit
-- Reference BioEMU paper when published
+- Reference this toolkit when reporting analyses performed with this suite
+- Consider citing relevant MD software (GROMACS, MDAnalysis, etc.) used in conjunction
 
 ---
 
