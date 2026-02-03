@@ -1,17 +1,18 @@
-# Ion Channel Gating Analysis Example
+# Functional State Analysis Example
 
-Example for analyzing ion channel gating mechanisms using pore hydration and inter-helical dynamics.
+Example template for analyzing proteins with distinct functional states.
 
 ## Key Analyses
 
-- Pore hydration dynamics (water occupancy changes)
-- Helix reorientation during gating
-- Ion coordination geometry
-- Gate opening kinetics
+This example demonstrates analysis of:
+- Structural changes between states
+- Solvation pattern differences
+- Interaction network changes
+- Flexibility variations
 
 ## Configuration Template
 
-See `docs/QUICK_REFERENCE.md` - Template 3 for ion channel-specific settings.
+See `docs/QUICK_REFERENCE.md` for configuration examples tailored to your protein system.
 
 ---
 

@@ -1,53 +1,46 @@
 # Example Analyses
 
-This folder contains example configurations and results for different protein types.
+This folder contains example configurations and templates for analyzing different types of protein systems. These examples demonstrate how to use this toolkit for various analysis scenarios.
 
 ## Available Examples
 
-### 1. KDEL Receptor Comparison (kdel_comparison/)
+### 1. Comparative State Analysis (kdel_comparison/)
 
-**Protein**: KDEL Receptor (KDELR)
-**Analysis**: Apo vs. KDEL peptide-bound conformations
+**Analysis Type**: Comparing different states of a protein
 **Highlights**:
-- 7 transmembrane helices
-- Ligand-induced conformational changes
-- Water-mediated interactions
+- Multi-state system comparison
+- Ligand binding effects
+- Conformational dynamics
 
-**Files**:
-- `kdel_config.py` - Configuration file with KDEL-specific settings
-- `data/` - (add your simulation files here)
-- `results/` - (analysis output)
+**Configuration Template**: See `docs/QUICK_REFERENCE.md` for configuration examples
 
 **To Run**:
 ```python
-# In notebook, replace CONFIG with:
-from examples.kdel_comparison.kdel_config import CONFIG
-
-# Or copy contents into the notebook's configuration cell
+# In notebook, adapt the configuration to your protein system
+# Refer to kdel_comparison/kdel_config.py as a template
 ```
 
 ---
 
-### 2. GPCR Variants (gpcr_variants/)
+### 2. Variant Analysis (gpcr_variants/)
 
-**Protein**: G-Protein Coupled Receptor
-**Analysis**: Wild-type vs. point mutations
+**Analysis Type**: Comparing wild-type and mutant variants
 **Highlights**:
 - Multi-system comparison
-- Variant effect prediction
-- Conformational stability
+- Structural differences across variants
+- Stability and flexibility analysis
 
 **Configuration Template**: See `docs/QUICK_REFERENCE.md` - Template 2
 
 ---
 
-### 3. Ion Channel Gating (ion_channel/)
+### 3. Functional Dynamics (ion_channel/)
 
-**Protein**: Ion Channel
-**Analysis**: Closed vs. open state dynamics
+**Analysis Type**: Analyzing conformational states and transitions
 **Highlights**:
-- Pore hydration analysis
-- Gating mechanism
+- State-dependent analysis
+- Structural changes between states
+- Hydration and interaction patterns
 - Helix reorientation
 
 **Configuration Template**: See `docs/QUICK_REFERENCE.md` - Template 3

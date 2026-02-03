@@ -1,52 +1,46 @@
-# KDEL Receptor Analysis Example
+# Comparative State Analysis Example
 
-This directory contains configuration and example results for analyzing KDEL receptor (KDELR) dynamics.
+This directory contains a configuration template for analyzing multi-state protein dynamics.
 
-## What is KDELR?
+## Analysis Template
 
-KDEL Receptor is a 7-transmembrane (7-TM) G-protein coupled receptor (GPCR) that binds to KDEL-containing proteins.
+This example demonstrates comparative analysis of different protein states (e.g., apo vs. ligand-bound, wild-type vs. mutant, open vs. closed).
 
 ## Analysis Focus
 
-1. **Structural Stability**: RMSD/RMSF across apo and bound states
-2. **Conformational Changes**: Inter-helical dynamics during binding
-3. **Binding Site Hydration**: Water occupancy in ligand-binding pocket
-4. **Interactions**: Hydrogen bonds and water bridges stabilizing the complex
+1. **Structural Stability**: RMSD/RMSF across different states
+2. **Conformational Changes**: Domain or secondary structure dynamics
+3. **Solvation Patterns**: Water accessibility and occupancy
+4. **Interaction Analysis**: Hydrogen bonds and contact patterns
 
-## To Run This Example
+## To Use This Template
 
-1. **Add trajectory files** to `data/` subfolder:
+1. **Prepare your trajectory files**:
    ```
-   data/
-   ├── kdel_apo/
-   │   ├── structure.gro
-   │   └── trajectory.xtc
-   └── kdel_bound/
-       ├── structure.gro
-       └── trajectory.xtc
+   your_project/
+   ├── data/
+   │   ├── state1/
+   │   │   ├── structure.gro (or .pdb)
+   │   │   └── trajectory.xtc (or .dcd, .h5)
+   │   └── state2/
+   │       ├── structure.gro
+   │       └── trajectory.xtc
    ```
 
-2. **Use the configuration**:
+2. **Adapt the configuration**:
    ```python
    from examples.kdel_comparison.kdel_config import CONFIG
-   # Then run analysis notebook with this CONFIG
+   # Modify protein_name, paths, and analysis parameters for your system
    ```
 
-3. **Results will be saved** to `results/` automatically
+3. **Results will be saved** to your specified output directory
 
-## Expected Results
+## Configuration Tips
 
-| Metric | APO | KDEL-Bound |
-|--------|-----|-----------|
-| Average RMSD | 2.5 ± 1.0 Å | 2.8 ± 1.2 Å |
-| Pore hydration | 3.5 waters | 2.1 waters |
-| H-bond count | 15 | 18 |
-
-## References
-
-- KDELR structure: PDB 6I6H
-- pH-dependent gating mechanism (from PhD research)
-- Water-mediated binding interactions
+- See `docs/QUICK_REFERENCE.md` for detailed configuration options
+- Adjust analysis parameters (stride, cutoffs) based on your trajectory size
+- Define secondary structure regions if analyzing helices/sheets
+- Use consistent file formats across all systems being compared
 
 ---
 

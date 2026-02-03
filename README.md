@@ -18,14 +18,13 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Why BioEMU?](#why-bioemu)
-- [Comparison: BioEMU vs Classical All-Atom MD](#comparison-bioemu-vs-classical-all-atom-md)
+- [Simulation Methodologies Supported](#simulation-methodologies-supported)
+- [Multi-Method Analysis Framework](#multi-method-analysis-framework)
 - [Key Features](#key-features)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Available Analyses](#available-analyses)
 - [Documentation](#documentation)
-- [Use Cases from PhD Research](#use-cases-from-phd-research)
 - [Contributing](#contributing)
 - [License](#license)
 - [Citation](#citation)
@@ -94,13 +93,13 @@ This suite enables integrated analysis of trajectories from multiple simulation 
 - **Extract complementary insights** from different levels of molecular detail
 - **Generate publication-quality comparisons** with identical analysis parameters
 
-### Research Context: Application Examples
+### Research Context
 
-This toolkit was developed and tested using:
-- **All-atom molecular dynamics simulations** (GROMACS): Detailed atomic-level analysis of protein dynamics
-- **Coarse-grained simulations (BioEMU)**: Large-scale conformational sampling and functional motion identification
-
-The unified analysis framework allows researchers to compare findings across methodologies and combine insights for comprehensive biological understanding.
+This toolkit has been developed and tested across diverse protein systems. The suite enables researchers to:
+- Perform comprehensive analyses on MD trajectories from various sources
+- Compare results across different simulation approaches
+- Extract biological insights from different levels of molecular detail
+- Generate publication-quality visualizations and statistics
 
 ---
 
@@ -329,50 +328,6 @@ Persistent H-bonds between residues.
 | [QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md) | Configuration templates for common proteins |
 | [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | Common issues & solutions |
 | [API_REFERENCE.md](docs/API_REFERENCE.md) | Python function documentation |
-
----
-
-## Use Cases from PhD Research
-
-This toolkit was extensively validated during doctoral research on KDEL receptor (KDELR) dynamics:
-
-### Case Study 1: APO vs Bound State Comparison
-
-**Question**: How does ligand binding affect KDEL receptor conformations?
-
-**Approach**:
-1. Simulated apo and KDEL peptide-bound KDELR with both BioEMU and GROMACS
-2. Used this suite to compare stability (RMSD/RMSF)
-3. Analyzed inter-helical dynamics revealing ligand-induced closure
-4. Identified water bridging mediating the conformational change
-
-**Result**: Published finding of pH-dependent gating mechanism
-
-**Files in Examples**: `examples/kdel_comparison/`
-
-### Case Study 2: Pore Hydration Dynamics
-
-**Question**: How do water molecules stabilize the ligand-binding pore?
-
-**Approach**:
-1. Ran 5 μs BioEMU simulation (completed in 3 hours)
-2. Identified critical pore region with hydration analysis
-3. Validated with 100 ns GROMACS simulation with atomic detail
-4. Quantified water residence times and bridging patterns
-
-**Result**: Structural explanation for pore selectivity
-
-### Case Study 3: Multi-System Variant Analysis
-
-**Question**: How do point mutations affect KDELR dynamics?
-
-**Approach**:
-1. Simulated WT + 3 variants with BioEMU
-2. Compared RMSD/RMSF across all variants
-3. Identified variants with altered flexibility
-4. Prioritized variants for experimental testing
-
-**Result**: Predicted 2 variants with enhanced function (validated)
 
 ---
 

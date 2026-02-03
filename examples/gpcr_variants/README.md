@@ -1,23 +1,23 @@
-# GPCR Variant Analysis Example
+# Variant Comparison Analysis Example
 
-Example configuration and template for analyzing GPCR variants using BioEMU and classical MD.
+Example template for analyzing multiple protein variants (wild-type and mutants).
 
 ## What to Do
 
-1. Add your GPCR simulation files to `data/`
-2. Modify `gpcr_config.py` with your protein details
-3. Run the analysis notebook with the CONFIG
+1. Prepare trajectory files for your variants in organized directories
+2. Create a configuration with system information for each variant
+3. Run the analysis notebook with your CONFIG
 
 ## Configuration Template
 
-See `docs/QUICK_REFERENCE.md` - Template 2 for GPCR-specific settings.
+See `docs/QUICK_REFERENCE.md` for configuration examples.
 
-## Key Analyses for GPCR
+## Key Analyses for Variant Studies
 
-- Inter-helical dynamics (7 transmembrane helices)
-- Ligand binding site hydration
-- Conformational stability comparison
-- Mutation effects on dynamics
+- Stability comparison across variants
+- Per-residue flexibility differences
+- Interaction pattern variations
+- Conformational state differences
 
 ---
 
