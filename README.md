@@ -539,7 +539,7 @@ A: See the [Citation](#citation) section above.
 
 ## Acknowledgments
 
-Developed during doctoral research in computational structural biology. Validated against experimental findings and classical MD simulations.
+We thank the open-source scientific computing community, particularly the developers of MDAnalysis, GROMACS, NumPy, and SciPy for enabling this toolkit.
 
 ---
 
