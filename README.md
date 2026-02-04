@@ -9,7 +9,7 @@
 
 **A complete, production-ready analysis suite for protein molecular dynamics simulations with support for both BioEMU and classical all-atom MD trajectories**
 
-[Quick Start](#quick-start) • [Features](#features) • [Installation](#installation) • [Documentation](#documentation) • [Examples](#examples) • [Publications](#publications)
+[Quick Start](#quick-start)  • [Features](#key-features) • [Installation](#installation) • [Analysis](##available-analyses)
 
 </div>
 
@@ -26,14 +26,13 @@
 - [Available Analyses](#available-analyses)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 - [Citation](#citation)
 
 ---
 
 ## Overview
 
-The **BioEMU Analysis Suite** is a comprehensive toolkit for analyzing protein molecular dynamics simulations from multiple methodologies. This suite supports analysis of trajectories from [BioEMU](https://github.com/your-bioemu-repo) simulations, classical all-atom molecular dynamics (using GROMACS, AMBER, NAMD), and other MD engines.
+The **BioEMU Analysis Suite** is a comprehensive toolkit for analyzing protein molecular dynamics simulations from multiple methodologies. This suite supports analysis of trajectories from [BioEMU](https://github.com/microsoft/bioemu) simulations, classical all-atom molecular dynamics (using GROMACS, AMBER, NAMD), and other MD engines.
 
 By combining analyses from different methodologies, researchers can leverage the computational efficiency of coarse-grained approaches while maintaining the atomic detail provided by classical simulations. This integrated framework enables a more comprehensive understanding of protein dynamics across multiple scales.
 
@@ -60,7 +59,7 @@ BioEMU rapidly samples thousands of physically-plausible protein conformations f
 4. **Validate** with classical MD (optional)
 5. **Publish** results
 
-For more details on setting up BioEMU, please refer to the [official BioEMU repository](https://github.com/Standard-Deviations/BioEMU).
+For more details on setting up BioEMU, please refer to the [official BioEMU repository](https://github.com/microsoft/bioemu).
 
 ---
 
@@ -181,15 +180,11 @@ We provide a 10ns simulation of the **KDEL Receptor** so you can test the suite 
 
 ## Documentation
 
-- **[examples/README.md](examples/README.md)**: Detailed guide on running examples and interpreting analysis plots (RMSD, SASA, etc.)
+- **[examples/README.md](examples/README.md)**: Detailed guide on running examples and interpreting analysis plots (RMSD, SASA, etc.).
+- **[CONTRIBUTING.md](CONTRIBUTING.md)**: Guide for developers.
 
 For BioEMU installation, please refer to the official [BioEMU Repository](https://github.com/microsoft/bioemu).
 
----
-
-## Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
@@ -212,12 +207,6 @@ If you use this analysis suite in your research, please cite:
   url = {https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite}
 }
 ```
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
