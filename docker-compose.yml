@@ -1,0 +1,22 @@
+# docker-compose.yml
+# Run with: docker-compose up
+
+version: '3.8'
+
+services:
+  bioemu-analysis:
+    build: .
+    container_name: bioemu-analysis
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: >
+      jupyter notebook 
+      --ip=0.0.0.0 
+      --allow-root 
+      --no-browser 
+      --NotebookApp.token=''
+      --NotebookApp.password=''

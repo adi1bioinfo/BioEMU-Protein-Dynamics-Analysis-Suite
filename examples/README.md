@@ -1,100 +1,68 @@
-# Example Analyses
+# BioEMU Analysis Examples
 
-This folder contains example configurations and templates for analyzing different types of protein systems. These examples demonstrate how to use this toolkit for various analysis scenarios.
+This library enables a **hybrid workflow**:
+1.  **Generate data** using BioEMU (or standard MD).
+2.  **Analyze** it using this suite.
 
-## Available Examples
-
-### 1. Comparative State Analysis (kdel_comparison/)
-
-**Analysis Type**: Comparing different states of a protein
-**Highlights**:
-- Multi-state system comparison
-- Ligand binding effects
-- Conformational dynamics
-
-**Configuration Template**: See `docs/QUICK_REFERENCE.md` for configuration examples
-
-**To Run**:
-```python
-# In notebook, adapt the configuration to your protein system
-# Refer to kdel_comparison/kdel_config.py as a template
-```
+We provide a complete, ready-to-run example using the **KDEL Receptor**.
 
 ---
 
-### 2. Variant Analysis (gpcr_variants/)
+## 🚀 Running the Example (Batteries Included)
 
-**Analysis Type**: Comparing wild-type and mutant variants
-**Highlights**:
-- Multi-system comparison
-- Structural differences across variants
-- Stability and flexibility analysis
+We have included a 10ns simulation trajectory for the KDEL receptor so you can test the analysis suite immediately.
 
-**Configuration Template**: See `docs/QUICK_REFERENCE.md` - Template 2
+### 1. Locate the Data
+The example data is in `examples/kdel_analysis/starter_data/`:
+- `kdel_receptor_structure.gro`: The protein structure.
+- `kdel_receptor_10ns_simulation.xtc`: A short 10ns trajectory.
 
----
-
-### 3. Functional Dynamics (ion_channel/)
-
-**Analysis Type**: Analyzing conformational states and transitions
-**Highlights**:
-- State-dependent analysis
-- Structural changes between states
-- Hydration and interaction patterns
-- Helix reorientation
-
-**Configuration Template**: See `docs/QUICK_REFERENCE.md` - Template 3
-
----
-
-## How to Create Your Own Example
-
-1. **Create a folder**: `examples/my_protein/`
-
-2. **Add configuration file**: `my_protein_config.py`
-   ```python
-   CONFIG = {
-       "protein_name": "My Protein",
-       "systems": { ... },
-       # ... rest of config
-   }
-   ```
-
-3. **Create data subfolder**: `examples/my_protein/data/`
-   - Add your topology and trajectory files
-
-4. **Add README**: `examples/my_protein/README.md`
-   - Explain the protein and what to expect
-
-5. **Run analysis** and save results to `examples/my_protein/results/`
+### 2. Run the Analysis
+1.  Open the main notebook: `Comprehensive_Analysis.ipynb` (at the root of the repo).
+2.  In the **Configuration** cell, you can load the example config directly:
+    ```python
+    # Import the pre-made configuration
+    import sys
+    sys.path.append('./examples/kdel_analysis')
+    from kdel_config import CONFIG
+    
+    # Or simply copy-paste the dictionary from kdel_config.py
+    ```
+3.  Run all cells.
+4.  Check the `kdel_analysis_results/` folder for plots and reports.
 
 ---
 
-## Contributing Examples
+## 🪄 Using Your Own Data
 
-Found an interesting analysis? Share it!
+To analyze your own protein (e.g., from a BioEMU generation or GROMACS run):
 
-1. Fork this repository
-2. Add your example following the template above
-3. Include a brief description and results summary
-4. Submit a pull request
+1.  **Prepare your files**: You need a topology (`.pdb`, `.gro`) and a trajectory (`.xtc`, `.dcd`).
+2.  **Edit the Configuration**:
+    In the `Comprehensive_Analysis.ipynb` notebook, modify the `CONFIG` dictionary:
+    
+    ```python
+    CONFIG = {
+        "protein_name": "My Ion Channel",
+        "output_dir": "./results_my_protein",
+        "systems": {
+            "wild_type": {
+                "label": "Wild Type",
+                "topology": "/path/to/my_data/structure.pdb",
+                "trajectory": "/path/to/my_data/bioemu_samples.xtc",
+                "color": "blue"
+            },
+            # Add more systems to compare if needed
+             "mutant": { ... }
+        },
+        # ... enable/disable analyses below
+    }
+    ```
+
+## 🧬 BioEMU Workflow
+If you are generating ensembles with BioEMU:
+1.  Run BioEMU to get PDB samples.
+2.  Convert samples to a single trajectory `.xtc` (using `mdtraj` or `gromacs`).
+3.  Analysis steps are identical to the above!
 
 ---
-
-## Tips for Using Examples
-
-- **Start simple**: Begin with KDEL example if new to the suite
-- **Adapt templates**: Use `QUICK_REFERENCE.md` templates as starting points
-- **Test first**: Run on a subset of data first (smaller frame stride)
-- **Compare systematically**: Keep system names and selections consistent
-
----
-
-For more information:
-- [ANALYSIS_GUIDE.md](../docs/ANALYSIS_GUIDE.md) - Detailed analysis descriptions
-- [QUICK_REFERENCE.md](../docs/QUICK_REFERENCE.md) - Configuration templates
-- [README.md](../README.md) - Main documentation
-
----
-
-**Last Updated**: February 2025
