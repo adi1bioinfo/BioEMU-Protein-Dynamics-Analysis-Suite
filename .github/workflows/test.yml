@@ -26,8 +26,9 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
         # Install build dependencies manually to support --no-build-isolation
         # pinned numpy<2.0.0 is CRITICAL for MDTraj/Cython compilation
-        # Force specific stable numpy 1.x version to avoid any 2.0.0rc1 leakage
-        python -m pip install versioneer Cython "numpy==1.26.4" oldest-supported-numpy
+        # Use simple constraint to support Py3.8 (max 1.24.4) and Py3.9+ (max 1.26.x)
+        # Pin Cython<3 to ensure stability with MDTraj 1.x compilation
+        python -m pip install versioneer "Cython<3" "numpy<2.0.0" oldest-supported-numpy
         # Install package without build isolation to force use of pre-installed numpy
         pip install --no-build-isolation -e .[dev]
         
