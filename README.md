@@ -5,7 +5,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![GitHub Stars](https://img.shields.io/github/stars/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite)](https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite)
+
 
 **A complete, production-ready analysis suite for protein molecular dynamics simulations with support for both BioEMU and classical all-atom MD trajectories**
 
@@ -80,7 +80,6 @@ BioEMU-Protein-Dynamics-Analysis-Suite/
 ├── examples/                  # Examples & Unified Guide
 │   ├── kdel_analysis/         # Ready-to-run KDEL example
 │   └── README.md              # Examples & Analysis Guide
-├── data/                      # Place YOUR data here
 ├── results/                   # Output directory
 ├── Comprehensive_Analysis.ipynb  # MAIN ANALYSIS NOTEBOOK
 ├── pyproject.toml             # Project configuration
@@ -215,12 +214,13 @@ If you use this analysis suite in your research, please cite:
   year = {2026},
   url = {https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite}
 }
+```
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -228,6 +228,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 **Made with ❤️ for the structural biology community**
 
-⭐ If you find this useful, please star this repository!
+⭐ **If you find this useful, please star this repository!** ⭐
 
 </div>
