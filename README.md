@@ -68,8 +68,7 @@ For more details on setting up BioEMU, please refer to the [official BioEMU repo
 
 The project is organized for clarity and maintainability:
 
-```
-```
+```text
 BioEMU-Protein-Dynamics-Analysis-Suite/
 ├── src/
 │   └── bioemu_analysis/       # Core analysis modules
