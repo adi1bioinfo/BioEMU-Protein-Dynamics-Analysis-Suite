@@ -4,7 +4,6 @@ __pycache__/
 *.pyo
 *.egg-info/
 .DS_Store
-archive/
 *.log
 .vscode/
 .pytest_cache/
