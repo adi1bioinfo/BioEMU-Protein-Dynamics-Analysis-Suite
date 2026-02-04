@@ -183,9 +183,8 @@ We provide a 10ns simulation of the **KDEL Receptor** so you can test the suite 
 
 - **[examples/README.md](examples/README.md)**: Detailed guide on running examples and interpreting analysis plots (RMSD, SASA, etc.).
 - **[CONTRIBUTING.md](CONTRIBUTING.md)**: Guide for developers.
-- **[Troubleshooting](#troubleshooting)**: Common fixes (below).
 
-For BioEMU installation, please refer to the official [BioEMU Repository](https://github.com/Standard-Deviations/BioEMU).
+For BioEMU installation, please refer to the official [BioEMU Repository](https://github.com/microsoft/bioemu).
 
 ---
 
