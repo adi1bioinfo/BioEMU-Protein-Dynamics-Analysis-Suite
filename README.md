@@ -13,6 +13,26 @@
 
 </div>
 
+## About the Author
+
+**Aditi Laddha — Computational Structural Biologist & Data Scientist**
+
+Aditi is a computational structural biologist and data scientist with expertise in protein dynamics, molecular simulation analysis, and reproducible data workflows. She develops end-to-end analysis pipelines that combine trajectory processing, statistical modeling, and machine learning to extract biologically meaningful insights from simulation data.
+
+**Core Competencies:**
+- **Domain:** Protein dynamics, structural bioinformatics, molecular simulations
+- **Languages & Tools:** Python, GROMACS, MDAnalysis, MDTraj, NumPy, pandas, SciPy, Matplotlib, Seaborn
+- **Machine Learning & Data Science:** scikit-learn, PyTorch (applied to molecular features), feature engineering, statistical modeling
+- **Reproducibility & DevOps:** Git, Docker, Conda, CI/CD, automated testing, documentation
+
+**Selected Contributions:**
+- Developed the `BioEMU Analysis Suite` for multi-method trajectory analysis and reproducible reporting
+- Built publication-quality visualizations and performance-optimized analysis pipelines for large trajectories
+
+**Contact & Profile:**
+- GitHub: https://github.com/adi1bioinfo
+- Email: adi1bioinfo@gmail.com
+
 ---
 
 ## Table of Contents
@@ -20,6 +40,7 @@
 - [Overview](#overview)
 - [Simulation Methodologies Supported](#simulation-methodologies-supported)
 - [Multi-Method Analysis Framework](#multi-method-analysis-framework)
+- [BioEMU Integration](#bioemu-integration)
 - [Key Features](#key-features)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
@@ -100,6 +121,74 @@ This toolkit has been developed and tested across diverse protein systems. The s
 - Compare results across different simulation approaches
 - Extract biological insights from different levels of molecular detail
 - Generate publication-quality visualizations and statistics
+
+---
+
+## BioEMU Integration
+
+This suite now provides **seamless integration with BioEMU** for analyzing AI-generated protein ensembles alongside classical simulations.
+
+### What is BioEMU?
+
+**BioEMU** is a state-of-the-art generative deep learning model that rapidly samples thousands of physically-plausible protein conformations from sequence input, bypassing the need for long, resource-intensive molecular dynamics simulations.
+
+| Feature | Classical MD | BioEMU |
+|---------|--------------|--------|
+| **Time to Conformers** | Weeks to months | Minutes to hours |
+| **Sample Diversity** | Limited by sampling time | Diverse equilibrium ensembles |
+| **Computational Cost** | HPC-required | Single GPU workstation |
+| **Best For** | Detailed atomic interactions | Large-scale ensemble generation |
+
+### BioEMU Workflow with This Suite
+
+```
+1. Generate ensemble with BioEMU (hours)
+   ↓
+2. Analyze with this suite (minutes)
+   ↓
+3. Identify interesting conformations
+   ↓
+4. Validate with classical MD (optional)
+   ↓
+5. Publication-ready results
+```
+
+### Quick Start: Analyzing BioEMU Output
+
+```python
+CONFIG = {
+    "protein_name": "My Protein",
+    "systems": {
+        "bioemu": {
+            "topology": "./bioemu_structure.pdb",
+            "trajectory": "./bioemu_ensemble.xtc",
+            "label": "BioEMU 100 samples",
+        },
+    },
+    "analyses": {
+        "rmsd_rmsf": True,      # Ensemble diversity
+        "sasa": True,           # Surface exposure
+        "hydrogen_bonds": True, # Persistent interactions
+        "pore_hydration": True, # (for channels)
+    }
+}
+```
+
+### Key Analyses for BioEMU Data
+
+- **RMSD/RMSF**: Identify conformational diversity and flexible regions
+- **SASA**: Explore variable surface exposure across ensemble
+- **Hydrogen Bonds**: Detect stabilizing interactions
+- **Pore Hydration**: Analyze water dynamics in functional cavities
+- **Inter-Helical Dynamics**: Track relative domain motions
+
+### Learn More
+
+See **[BIOEMU_SETUP_GUIDE.md](docs/BIOEMU_SETUP_GUIDE.md)** for:
+- BioEMU installation instructions
+- Detailed conformer generation workflow
+- Comparative analysis strategies (BioEMU vs Classical MD)
+- Troubleshooting and advanced usage
 
 ---
 

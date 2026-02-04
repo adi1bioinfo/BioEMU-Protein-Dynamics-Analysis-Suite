@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9
+  - python=3.10
   - numpy>=1.20.0
   - scipy>=1.7.0
   - pandas>=1.3.0
@@ -20,4 +20,10 @@ dependencies:
   - plotly>=5.0.0
   - pip>=21.0
   - pip:
+    # BioEMU - AI-powered protein ensemble generation
+    - bioemu>=1.0.0
+    # Analysis and visualization
     - tqdm>=4.62.0
+    - py3Dmol>=1.8.0
+    - prody>=2.0.0
+    - biopython>=1.79.0
