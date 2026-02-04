@@ -40,6 +40,7 @@ dependencies = [
     "ipywidgets>=7.6.0",
     "tqdm>=4.62.0",
     "pillow>=8.0.0",
+    "gsd<4.0.0", # Pin gsd to support numpy 1.x in CI
 ]
 
 [project.optional-dependencies]
