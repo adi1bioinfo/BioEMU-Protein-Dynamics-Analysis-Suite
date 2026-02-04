@@ -41,6 +41,8 @@ Aditi is a computational structural biologist and data scientist with expertise 
 - [Simulation Methodologies Supported](#simulation-methodologies-supported)
 - [Multi-Method Analysis Framework](#multi-method-analysis-framework)
 - [BioEMU Integration](#bioemu-integration)
+- [Quick Installation](#quick-installation)
+- [Directory Structure](#directory-structure)
 - [Key Features](#key-features)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
@@ -103,6 +105,66 @@ Use Coarse-Grained Methods (BioEMU) for:
 ```
 
 By analyzing trajectories from both approaches with identical metrics, researchers can gain complementary insights into protein behavior.
+
+---
+
+---
+
+## Directory Structure
+
+The project is organized for clarity and maintainability:
+
+```
+BioEMU-Protein-Dynamics-Analysis-Suite/
+├── installation/              # Installation & environment setup
+│   ├── INSTALL.md            # Consolidated installation guide
+│   ├── requirements.txt       # Pip dependencies
+│   └── environment.yml        # Conda environment
+│
+├── src/
+│   └── analysis/              # Core analysis modules (python package)
+│       ├── __init__.py
+│       ├── trajectory_loader.py
+│       ├── analysis_functions.py
+│       └── visualization.py
+│
+├── scripts/                   # Utility scripts and setup
+│   ├── setup.py
+│   └── __init__.py
+│
+├── docs/
+│   ├── API_REFERENCE.md       # API documentation
+│   ├── ANALYSIS_GUIDE.md      # Detailed analysis workflows
+│   ├── TROUBLESHOOTING.md     # Common issues & solutions
+│   ├── GETTING_STARTED.md     # Step-by-step tutorials
+│   ├── bioemu_installation/   # BioEMU-specific guides
+│   │   └── BIOEMU_SETUP_GUIDE.md
+│   └── reference/             # Additional reference documentation
+│       ├── BIOEMU_INTEGRATION_GUIDE.md
+│       ├── CONFIG_QUICK_REFERENCE.md
+│       └── ...
+│
+├── examples/                  # Example workflows & configurations
+│   ├── case_studies/
+│   └── ...
+│
+├── archive/                   # Legacy content
+│   └── notebooks/             # Archived notebooks
+│
+├── data/                      # Sample data (if included)
+├── results/                   # Output results directory
+├── README.md                  # This file
+├── GETTING_STARTED.md         # Quick start guide
+├── LICENSE                    # MIT License
+└── .gitignore                 # Git ignore rules
+```
+
+**Key folders:**
+- **`installation/`**: Everything needed to set up your environment (pip or conda)
+- **`src/analysis/`**: Core Python analysis package (importable as `from src.analysis import ...`)
+- **`docs/`**: User guides, API reference, and troubleshooting
+- **`examples/`**: Ready-to-run analysis templates
+- **`archive/`**: Legacy notebooks (preserved for reference)
 
 ---
 
@@ -238,11 +300,11 @@ git clone https://github.com/adi1bioinfo/BioEMU-Protein-Dynamics-Analysis-Suite.
 cd BioEMU-Protein-Dynamics-Analysis-Suite
 
 # Create and activate conda environment
-conda create -n bioemu-analysis python=3.9
+conda create -n bioemu-analysis python=3.10
 conda activate bioemu-analysis
 
 # Install from requirements
-pip install -r requirements.txt
+pip install -r installation/requirements.txt
 ```
 
 ### Option 2: Pip with Virtual Environment
@@ -257,7 +319,7 @@ python3 -m venv bioemu-env
 source bioemu-env/bin/activate  # On Windows: bioemu-env\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r installation/requirements.txt
 ```
 
 ### Option 3: Docker (Fully Isolated)
@@ -412,9 +474,9 @@ Persistent H-bonds between residues.
 
 | Document | Purpose |
 |----------|---------|
-| [INSTALLATION.md](docs/INSTALLATION.md) | Detailed setup instructions (conda/pip/Docker) |
-| [ANALYSIS_GUIDE.md](docs/ANALYSIS_GUIDE.md) | Complete guide to all 7 analyses |
-| [QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md) | Configuration templates for common proteins |
+| [installation/INSTALL.md](installation/INSTALL.md) | Detailed setup instructions (conda/pip/Docker) |
+| [docs/ANALYSIS_GUIDE.md](docs/ANALYSIS_GUIDE.md) | Complete guide to all 7 analyses |
+| [docs/reference/CONFIG_QUICK_REFERENCE.md](docs/reference/CONFIG_QUICK_REFERENCE.md) | Configuration templates for common proteins |
 | [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | Common issues & solutions |
 | [API_REFERENCE.md](docs/API_REFERENCE.md) | Python function documentation |
 
