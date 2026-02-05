@@ -105,6 +105,14 @@ BioEMU-Protein-Dynamics-Analysis-Suite/
 - **Robust**: Handles GROMACS, AMBER, MDTraj-compatible formats
 - **Publication-Ready**: High-resolution plots, statistics, error estimation
 
+### 🔬 Why This Matters
+Determining the dynamic behavior of proteins is crucial for:
+1.  **Rational Drug Design**: Targeting cryptic pockets only visible in excited states (e.g., GPCR activation).
+2.  **Mechanism of Action**: Understanding how molecular motors or channels gate.
+3.  **Variant Analysis**: Predicting how clinical mutations destabilize functional states.
+
+This suite democratizes access to these insights by combining rapid BioEMU sampling with rigorous physical analysis.
+
 ---
 
 ## Installation
@@ -127,6 +135,38 @@ python -c "import MDAnalysis as mda; import bioemu; print('✓ Installation succ
 ```
 
 For advanced installation options, check `pyproject.toml`.
+
+### 🐳 Docker Usage
+
+Run the analysis suite in an isolated environment without installing anything locally:
+
+```bash
+# Start the Jupyter Lab environment
+docker-compose up --build
+```
+
+- Access Jupyter at: `http://localhost:8888`
+- The current directory is mounted at `/workspace`, so changes are saved locally.
+
+
+---
+
+## Generating Ensembles with BioEMU
+
+Before analyzing, you need to generate protein conformational ensembles using BioEMU.
+
+### 🧬 Sampling
+To generate diverse conformations from a sequence (e.g., for a GPCR):
+
+```bash
+# Example command (requires BioEMU installation)
+python bioemu_sampling.py --protein_dir gpcr_dir --num_samples 100
+```
+
+1.  **Input**: A FASTA file or PDB structure.
+2.  **Output**: A PDB file or directory containing the generated ensemble.
+
+*Note: Ensure you have the `bioemu` environment active.*
 
 ---
 
@@ -161,6 +201,18 @@ We provide a 10ns simulation of the **KDEL Receptor** so you can test the suite 
         # ...
     }
     ```
+
+---
+
+## Biological Applications
+
+This suite is particularly powerful for studying complex systems like **G-Protein-Coupled Receptors (GPCRs)**, Ion Channels, and Transporters.
+
+*   **⚡ Rapid Ensemble Generation**: Sample diverse conformers capturing active, inactive, and intermediate states.
+*   **🔍 Quantitative Dynamics Profiling**: Pinpoint flexible loops and rigid cores critical for activation using **RMSD & RMSF**.
+*   **🌉 Gating & Allostery**: Characterize residue contacts and motions that underpin signal transduction.
+*   **💊 Cryptic Pocket Detection**: Reveal transient binding sites missed by static structures, aiding drug discovery.
+*   **🧬 Mutational Impact**: Assess how mutations alter dynamic behavior and potential drug responses.
 
 ---
 
